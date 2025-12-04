@@ -34,5 +34,5 @@
     },
 
     // Clone the daisy examples and libraries and build them
-    "postCreateCommand": "git config --global http.sslVerify false && git clone --recursive https://github.com/electro-smith/DaisyExamples.git && git config --global http.sslVerify true && make -C /workspaces/daisy-container/DaisyExamples/libDaisy && make -C /workspaces/daisy-container/DaisyExamples/DaisySP"
+    "postCreateCommand": "git config --global http.sslVerify false && git clone --recursive https://github.com/electro-smith/DaisyExamples.git && git config --global http.sslVerify true && make -C ${containerWorkspaceFolder}/DaisyExamples/libDaisy && make -C ${containerWorkspaceFolder}/DaisyExamples/DaisySP"
 }
