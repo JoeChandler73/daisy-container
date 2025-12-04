@@ -1,0 +1,41 @@
+{
+    "name": "Daisy Dev Container",
+    "build":{
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+
+    "customizations": {
+        "vscode": {
+        "extensions": [
+            "ms-vscode.cpptools",
+            "twxs.cmake",
+            "maruspa.cmake-tools-helper",
+            "ms-vscode.cpptools-extension-pack",
+            "ms-vscode.cpptools-themes",
+            "ms-vscode.cmake-tools",
+            "ms-vscode.makefile-tools"
+        ]
+        }
+    },
+
+    // === CRITICAL FOR EMBEDDED ===
+    // Flashing the device (using dfu-util) requires access to the USB port.
+    // This setting passes all USB devices to the container.
+    // NOTE: This requires Docker Desktop or the equivalent host setup.
+    "runArgs": [
+        "--privileged",
+        "--device=/dev/bus/usb"
+    ],
+
+    "mounts": [
+        "source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
+    ],
+
+    "containerEnv": {
+        "UDEV": "1"
+    },
+
+    // Set default terminal to use Make or CMake from the container
+    "postCreateCommand": "echo 'Daisy Dev Container ready. Run \"make\" to build your project.'"
+}
