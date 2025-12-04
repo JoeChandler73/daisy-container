@@ -8,6 +8,7 @@
 *.cache
 *.idb
 *.ipch
+DaisyExamples/
 Log/
 Debug/
 Release/

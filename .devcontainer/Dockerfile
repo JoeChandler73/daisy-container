@@ -11,6 +11,7 @@ RUN apt-get update && \
     wget \
     bzip2 \
     usbutils \
+    python 3\
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install the specific ARM toolchain version (10-2020-q4-major)

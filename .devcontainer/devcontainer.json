@@ -9,7 +9,6 @@
         "vscode": {
         "extensions": [
             "ms-vscode.cpptools",
-            "twxs.cmake",
             "maruspa.cmake-tools-helper",
             "ms-vscode.cpptools-extension-pack",
             "ms-vscode.cpptools-themes",
@@ -19,10 +18,8 @@
         }
     },
 
-    // === CRITICAL FOR EMBEDDED ===
-    // Flashing the device (using dfu-util) requires access to the USB port.
-    // This setting passes all USB devices to the container.
-    // NOTE: This requires Docker Desktop or the equivalent host setup.
+    // The container needs access to USB devices for programming Daisy boards
+    // This will only work on native docker, not docker desktop as that uses virtual machines
     "runArgs": [
         "--privileged",
         "--device=/dev/bus/usb"
@@ -36,6 +33,6 @@
         "UDEV": "1"
     },
 
-    // Set default terminal to use Make or CMake from the container
-    "postCreateCommand": "echo 'Daisy Dev Container ready. Run \"make\" to build your project.'"
+    // Clone the daisy examples and libraries and build them
+    "postCreateCommand": "git config --global http.sslVerify false && git clone --recursive https://github.com/electro-smith/DaisyExamples.git && git config --global http.sslVerify true && make -C /workspaces/daisy-container/DaisyExamples/libDaisy && make -C /workspaces/daisy-container/DaisyExamples/DaisySP"
 }

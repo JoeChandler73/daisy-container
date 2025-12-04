@@ -1,10 +1,7 @@
-git clone --recursive https://github.com/electro-smith/DaisyExamples
+Open Folder in VSCode
 
-cd DaisyExamples/libDaisy
-make
-
-cd DaisyExamples/DaisySP
-make
+When propmted 'Reopen in container'
+Wait for container build ........
 
 cd DaisyExamples/seed/Blink
 make
