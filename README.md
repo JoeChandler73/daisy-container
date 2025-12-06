@@ -6,7 +6,7 @@ Before starting read the official [Getting started page](https://daisy.audio/tut
 
 This dev container will set up a containerised vscode developemnt environment with the necessary build tools installed and the DaisyExamples git repository cloned and libraries build.
 
-This avoid you having to install embeeded C++ tools on your host machine.
+This avoid you having to install the embeded C++ tools on your host machine.
 
 ## Getting Started
 
