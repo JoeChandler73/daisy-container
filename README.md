@@ -18,7 +18,7 @@ This avoid you having to install the embeded C++ tools on your host machine.
     <li>Install the 'Dev Containers' vscode extension</li>
 </ul>
 
-You must have Docker installed. Currently this dev container will only work on Linux with native docker. This is because docker sektop and docker on Windows / Mac use Virtual Machines which do not allow access to the hosts USB devices.
+You must have Docker installed. Currently this dev container will only work on Linux with native Docker. This is because Docker Desktop and Docker on Windows / Mac use Virtual Machines which do not allow access to the hosts USB devices.
 
 ### Getting the Source
 
