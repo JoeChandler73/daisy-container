@@ -2,7 +2,7 @@
 
 This is a dev conatiner for getting started with Daisy.
 
-Before starting read the officiasl [Getting started page](https://daisy.audio/tutorials/cpp-dev-env/)!
+Before starting read the official [Getting started page](https://daisy.audio/tutorials/cpp-dev-env/)!
 
 This dev container will set up a containerised vscode developemnt environment with the necessary build tools installed and the DaisyExamples git repository cloned and libraries build.
 
