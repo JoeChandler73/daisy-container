@@ -4,9 +4,9 @@ This is a dev conatiner for getting started with Daisy.
 
 Before starting read the official [Getting started page](https://daisy.audio/tutorials/cpp-dev-env/)!
 
-This dev container will set up a containerised vscode developemnt environment with the necessary build tools installed and the DaisyExamples git repository cloned and libraries build.
+This dev container will set up a containerised vscode development environment with the neccessary build tools installed and the DaisyExamples git repository cloned and libraries build.
 
-This avoid you having to install the embeded C++ tools on your host machine.
+This avoid you having to install the embedded C++ tools on your host machine.
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ git clone https://github.com/JoeChandler73/daisy-container
 
 ### Creating the Daisy Development Container
 
-Open the checked out folder in vscode and when prompted choose 'Reopen in continer'.
+Open the checked out folder in vscode and when prompted choose 'Re-open in container'.
 
 This will take quite a while first time as the full container has to be built, tools installed, Daisy code cloned and libraries built.
 
